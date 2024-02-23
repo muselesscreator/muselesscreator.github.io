@@ -1,6 +1,6 @@
 {
-  "name": "test-react-app",
-  "version": "0.1.0",
+  "name": "muselesscreator.github.io",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -34,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@muselesscreator/react-shallow-snapshot": "^0.1.0"
   }
 }
