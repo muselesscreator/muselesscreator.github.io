@@ -28,7 +28,7 @@
   "homepage": "https://github.com/muselesscreator/muselesscreator.github.io",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && tsup src/index.jsx dist",
+    "build": "vite build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

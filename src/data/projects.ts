@@ -1,10 +1,10 @@
-const gradebookImg = require('../assets/gradebook.png');
-const learnerDashboardImg = require('../assets/learnerDashboard.png');
-const oraImg = require('../assets/ora.png');
-const strictDictImg = require('../assets/strictDict.png');
-const shallowSnapshotImg = require('../assets/shallowSnapshot.png');
-const useKeyedStateImg = require('../assets/useKeyedState.png');
-const oraGradingImg = require('../assets/oraGrading.png');
+import gradebookImg from '../assets/gradebook.png';
+import learnerDashboardImg from '../assets/learnerDashboard.png';
+import oraImg from '../assets/ora.png';
+import strictDictImg from '../assets/strictDict.png';
+import shallowSnapshotImg from '../assets/shallowSnapshot.png';
+import useKeyedStateImg from '../assets/useKeyedState.png';
+import oraGradingImg from '../assets/oraGrading.png';
 
 import { StrictDict } from '@muselesscreator/strict-dict';
 type ProjectData = {
