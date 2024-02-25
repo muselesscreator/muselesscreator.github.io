@@ -11,7 +11,6 @@ const Navbar = ({ activePage }) => {
         <NavLink
           className={classNames('navbar-link', { active: activePage === page })}
           to={`/${page}`}
-          onClick={() => setActivePage(page)}
         >
         {pageNames[page]}
         </NavLink>

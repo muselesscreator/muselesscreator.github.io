@@ -25,7 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/muselesscreator/muselesscreator.github.io.git"
   },
-  "homepage": "https://github.com/muselesscreator/muselesscreator.github.io",
+  "homepage": "/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
