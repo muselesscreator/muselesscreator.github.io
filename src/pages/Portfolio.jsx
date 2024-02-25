@@ -91,32 +91,27 @@ const Portfolio = () => {
           </li>
         </ul>
         <div className="filter-select-box">
-          <button
-            className="filter-select"
-          >
-            <div className="select-value">Select category</div>
-            <div className="select-icon"><FaChevronDown /></div>
-          </button>
-          <ul>
-            <li
+          <select className="filter-select" aria-label="Select category">
+            <option className="select-item">Select category <FaChevronDown /></option>
+            <option
               className={classNames('select-item', { active: projectFilter === ProjectCategories.all })}
               onClick={handleCategoryChange(ProjectCategories.all)}
             >
-              {ProjectCategories.all}
-            </li>
-            <li
+              {ProjectCategories.all} <FaChevronDown />
+            </option>
+            <option
               className={classNames('select-item', { active: projectFilter === ProjectCategories.public })}
               onClick={handleCategoryChange(ProjectCategories.public)}
             >
-              {ProjectCategories.public}
-            </li>
-            <li
+              {ProjectCategories.public}<FaChevronDown />
+            </option>
+            <option
               className={classNames('select-item', { active: projectFilter === ProjectCategories.openSource })}
               onClick={handleCategoryChange(ProjectCategories.openSource)}
             >
-              {ProjectCategories.openSource}
-            </li>
-          </ul>
+              {ProjectCategories.openSource}<FaChevronDown />
+            </option>
+          </select>
         </div>
         <ul className="project-list">
           {projects.filter((project) => project.category === projectFilter || projectFilter === ProjectCategories.all).map((project) => (

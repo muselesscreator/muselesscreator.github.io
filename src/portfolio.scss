@@ -912,6 +912,13 @@ b.timeline-text {
 }
 
 .filter-select {
+  border-right: 1rem solid transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.filter-select {
   background: var(--eerie-black-2);
   color: var(--light-gray);
   display: flex;
