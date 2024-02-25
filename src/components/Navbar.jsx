@@ -1,21 +1,20 @@
 import 'react';
 import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 import { pages, pageNames } from '../data/pages';
 
 
-const Navbar = ({ activePage, setActivePage }) => {
-
-  console.log({ activePage });
+const Navbar = ({ activePage }) => {
   const navEntry = (page) => {
-    console.log({ page, activePage });
     return (
       <li key={page} className="navbar-item">
-        <button
+        <NavLink
           className={classNames('navbar-link', { active: activePage === page })}
+          to={`/${page}`}
           onClick={() => setActivePage(page)}
         >
         {pageNames[page]}
-        </button>
+        </NavLink>
       </li>
     );
   };

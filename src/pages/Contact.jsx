@@ -1,12 +1,62 @@
 import 'react';
+import { useKeyedState } from '@muselesscreator/use-keyed-state';
+import { StrictDict } from '@muselesscreator/strict-dict';
+
+const stateKeys = StrictDict({
+  fullname: 'fullname',
+  email: 'email',
+  message: 'message',
+});
 
 const About = () => {
-  return (
-    <article className="about active">
-      <h1>About</h1>
-      I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+  const [fullname, setFullname] = useKeyedState(stateKeys.fullname, '');
+  const [email, setEmail] = useKeyedState(stateKeys.email, '');
+  const [message, setMessage] = useKeyedState(stateKeys.message, '');
 
-My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
+  const isValid = fullname && email && message;
+
+  return (
+    <article className="contact active">
+      <header>
+        <h2 className="h2 article-title">Contact</h2>
+      </header>
+      <section className="contact-form">
+        <h3 className="h3 form-title">Contact Form</h3>
+        <form method="POST" action="https://formspree.io/f/mkndboev" className="form" data-form>
+          <div className="input-wrapper">
+            <input
+              type="text"
+              name="fullname"
+              className="form-input"
+              placeholder="Full name"
+              required
+              value={fullname}
+              onChange={(e) => setFullname(e.target.value)}
+            />
+            <input
+              type="email"
+              name="email"
+              className="form-input"
+              placeholder="Email address"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <textarea
+            name="message"
+            className="form-input"
+            placeholder="Your Message"
+            required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+          <button className="form-btn" type="submit" disabled={!isValid}>
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </section>
     </article>
   );
 };

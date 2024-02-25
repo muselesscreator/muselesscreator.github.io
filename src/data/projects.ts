@@ -1,7 +1,10 @@
-import oraGradingImg from '../assets/oraGrading.png';
-import gradebookImg from '../assets/gradebook.png';
-import learnerDashboardImg from '../assets/learnerDashboard.png';
-import oraImg from '../assets/ora.png';
+const gradebookImg = require('../assets/gradebook.png');
+const learnerDashboardImg = require('../assets/learnerDashboard.png');
+const oraImg = require('../assets/ora.png');
+const strictDictImg = require('../assets/strictDict.png');
+const shallowSnapshotImg = require('../assets/shallowSnapshot.png');
+const useKeyedStateImg = require('../assets/useKeyedState.png');
+const oraGradingImg = require('../assets/oraGrading.png');
 
 import { StrictDict } from '@muselesscreator/strict-dict';
 type ProjectData = {
@@ -25,6 +28,40 @@ export const ProjectCategories = StrictDict({
 }) as Record<string, string>;
 
 const projects: ProjectData[] = [
+  {
+    title: '@muselesscreator/react-shallow-snapshot',
+    description: 'A shallow snapshot testing utility for React',
+    category: ProjectCategories.public,
+    githubUrl: 'https://www.github.com/muselesscreator/react-shallow-snapshot',
+    githubRepo: 'muselesscreator/react-shallow-snapshot',
+    packageName: '@muselesscreator/react-shallow-snapshot',
+    packageUrl: 'https://www.npmjs.com/package/@muselesscreator/react-shallow-snapshot',
+    image: shallowSnapshotImg,
+    projectUrl: 'https://www.npmjs.com/package/@muselesscreator/react-shallow-snapshot',
+  },
+  {
+    title: '@muselesscreator/strict-dict',
+    description: 'A key-safe object wrapper for JS',
+    category: ProjectCategories.public,
+    githubUrl: 'https://www.github.com/muselesscreator/strict-dict',
+    githubRepo: 'muselesscreator/strict-dict',
+    packageName: '@muselesscreator/strict-dict',
+    packageUrl: 'https://www.npmjs.com/package/@muselesscreator/strict-dict',
+    details: 'A key-safe dictionary for JavaScript.  This package is used in all of my projects and is available for anyone to use.',
+    image: strictDictImg,
+    projectUrl: 'https://www.npmjs.com/package/@muselesscreator/strict-dict',
+  },
+  {
+    title: '@muselesscreator/use-keyed-state',
+    description: 'A more testable React hook for keyed state management',
+    category: ProjectCategories.public,
+    githubUrl: 'https://www.github.com/muselesscreator/use-keyed-state',
+    githubRepo: 'muselesscreator/use-keyed-state',
+    packageName: '@muselesscreator/use-keyed-state',
+    packageUrl: 'https://www.npmjs.com/package/@muselesscreator/use-keyed-state',
+    projectUrl: 'https://www.npmjs.com/package/@muselesscreator/use-keyed-state',
+    image: useKeyedStateImg,
+  },
   {
     title: 'EdX Gradebook App Re-Architecture',
     description: 'Grade management app for EdX Course Staff',
