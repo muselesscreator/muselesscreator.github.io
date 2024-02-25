@@ -1,2 +1,0 @@
-// dist/strictDict-XCWHRALP-XCWHRALP-XCWHRALP.png
-var strictDict_XCWHRALP_XCWHRALP_XCWHRALP_default = "../strictDict-XCWHRALP-XCWHRALP-XCWHRALP-XCWHRALP.png";
