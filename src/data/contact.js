@@ -3,7 +3,7 @@ import avatar from '../assets/ampersand.png';
 
 const contactInfo = ({
   name: 'Ben Warzeski',
-  email: 'bwarzeski@gmail.com',
+  email: 'bwarzesk@gmail.com',
   title: 'Full-Stack Software Engineer',
   phone: '+1 (941) 387-5092',
   phoneRaw: '19413875092',
