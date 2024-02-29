@@ -17,7 +17,7 @@ const Resume = () => {
           <ol className="timeline-list">
             <li className="timeline-item">
               <h4 className="h4 timeline-item-title">Tulane University</h4>
-              <span>2007 — 2011</span>
+              <span>2006 — 2011</span>
               <p className="timeline-text">
                 Bachelor of Science in Mathematics with minors in Music and "Music, Science and Technology".
               </p>
