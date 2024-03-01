@@ -4,6 +4,7 @@ import Blog from '../pages/Blog';
 import Contact from '../pages/Contact';
 import Portfolio from '../pages/Portfolio';
 import Resume from '../pages/Resume';
+import Demos from '../pages/Demos';
 import { pages, pageNames } from '../data/pages';
 
 const articleComponents = {
@@ -12,6 +13,7 @@ const articleComponents = {
   [pages.contact]: Contact,
   [pages.portfolio]: Portfolio,
   [pages.resume]: Resume,
+  [pages.demo]: Demos,
 };
 
 const PageArticle = ({ activePage }) => {

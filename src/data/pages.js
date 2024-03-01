@@ -5,6 +5,7 @@ export const pages = StrictDict({
   contact: 'contact',
   resume: 'resume',
   portfolio: 'portfolio',
+  demo: 'demo',
   blog: 'blog',
 });
 
@@ -14,6 +15,7 @@ export const pageNames = StrictDict({
   [pages.resume]: 'Resume',
   [pages.portfolio]: 'Portfolio',
   [pages.blog]: 'Blog',
+  [pages.demo]: 'Demos',
 });
 
 export default pages;

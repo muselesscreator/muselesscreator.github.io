@@ -25,6 +25,7 @@ const Navbar = ({ activePage }) => {
         {navEntry(pages.resume)}
         {navEntry(pages.portfolio)}
         {/*navEntry(pages.blog)*/}
+        {navEntry(pages.demo)}
         {navEntry(pages.contact)}
       </ul>
     </nav>

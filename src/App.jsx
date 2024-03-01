@@ -16,6 +16,7 @@ function App() {
   React.useEffect(() => {
     setActivePage(effectivePage);
   }, [effectivePage, setActivePage]);
+  console.log({ activePage });
   return (
     <main>
       <Sidebar />
@@ -27,6 +28,8 @@ function App() {
           <Route path="/resume" element={<PageArticle activePage={pages.resume} />} />
           <Route path="/portfolio" element={<PageArticle activePage={pages.portfolio} />} />
           <Route path="/contact" element={<PageArticle activePage={pages.contact} />} />
+          <Route path="/demo" element={<PageArticle activePage={pages.demo} />} />
+          <Route path="/blog" element={<PageArticle activePage={pages.blog} />} />
         </Routes>
       </div>
     </main>
