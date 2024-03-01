@@ -10,8 +10,16 @@ import {
 
 const Demos = () => {
   const [demoFilter, setDemoFilter] = React.useState(demos[0]);
-  const handleCategoryChange = (category) => () => setDemoFilter(category);
+  const handleCategoryChange = (category) => () => {
+    console.log({ category });
+    setDemoFilter(category)
+  };
   const { Element } = demoFilter;
+  console.log({ demoFilter });
+  const demoObj = demos.reduce((acc, demo) => ({
+    ...acc,
+    [demo.title]: demo,
+  }), {});
   return (
     <article className="demos active">
       <header>
@@ -31,22 +39,23 @@ const Demos = () => {
           ))}
         </ul>
         <div className="filter-select-box">
-          <select className="filter-select" aria-label="Select category">
+          <select
+            className="filter-select"
+            aria-label="Select category"
+            onChange={(e) => setDemoFilter(demoObj[e.target.value])}
+          >
             <option className="select-item">Select category <FaChevronDown /></option>
             {demos.map((demo) => (
               <option
                 key={demo.title}
                 className={classNames('select-item', { active: demoFilter.title === demo.title })}
-                onClick={handleCategoryChange(demo)}
               >
                 {demo.title} <FaChevronDown />
               </option>
             ))}
           </select>
         </div>
-        {demos.filter((demo) => demo.title === demoFilter.title).map((demo) => (
-          <demo.Element key={demo.title} />
-        ))}
+        <Element key={demoFilter.title} />
       </section>
     </article>
   );

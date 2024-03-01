@@ -135,7 +135,7 @@ export class RowManager {
   }
 
   get noteWidth() {
-    return 100;
+    return 50;
     // return this.canvasDims.height / (this.scaleLength * this.rowOctaves);
   }
 

@@ -11,8 +11,8 @@ const BORDER = 2;
 const OCTAVE_OFFSET = 4;
 const CHORD_ROWS = 4;
 const OCTAVES = 3;
-const WIDTH = 600;
-const HEIGHT = 2000
+const WIDTH = 300;
+const HEIGHT = 2000;
 
 export const Canvas = ({
   scaleKey,
@@ -33,7 +33,7 @@ export const Canvas = ({
       scale: scaleKey,
       rootNote: toneKey,
       octaveOffset: OCTAVE_OFFSET,
-      rowOctaves: 2,
+      rowOctaves: 3,
       rowOctaveConfig: rowOffsets.reduce((acc, offset, index) => ({
         ...acc,
         [index]: offset,
