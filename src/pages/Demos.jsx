@@ -37,7 +37,7 @@ const Demos = () => {
               <option
                 key={demo.title}
                 className={classNames('select-item', { active: demoFilter.title === demo.title })}
-                onClick={handleCategoryChange(demo.title)}
+                onClick={handleCategoryChange(demo)}
               >
                 {demo.title} <FaChevronDown />
               </option>
