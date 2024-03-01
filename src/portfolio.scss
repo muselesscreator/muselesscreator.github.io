@@ -543,6 +543,20 @@ article.demos {
     padding: 2rem;
     margin: 1rem;
   }
+  .keyboard-roll {
+    input {
+      background-color: white;
+      display: inline;
+      width: 40px;
+      text-align: center;
+    }
+    .preset-select {
+      background-color: white;
+      padding: 2px 5px;
+      display: inline-block;
+      border-radius: 4px;
+    }
+  }
 }
 
 

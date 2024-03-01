@@ -44,11 +44,9 @@ const Demos = () => {
             ))}
           </select>
         </div>
-        <ul>
-          {demos.filter((demo) => demo.title === demoFilter.title).map((demo) => (
-            <demo.Element key={demo.title} />
-          ))}
-        </ul>
+        {demos.filter((demo) => demo.title === demoFilter.title).map((demo) => (
+          <demo.Element key={demo.title} />
+        ))}
       </section>
     </article>
   );
