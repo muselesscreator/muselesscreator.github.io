@@ -79,8 +79,9 @@ const SchoolData = () => {
 
   return (
     <div className="school-data">
-      <h3 className="h3">Boston Publuc Schools Data</h3>
+      <h3 className="h3">Boston Public Schools Data</h3>
       <h4 style={{ textAlign: 'center' }} className="h4">Square Feet vs Energy Usage</h4>
+      <p>Click on a point to see the school details</p>
       <ScatterPlot
         data={gsfVsEnergy}
         xLabel="Square Feet"
@@ -89,6 +90,7 @@ const SchoolData = () => {
       />
       <hr />
       <h4 style={{ textAlign: 'center' }} className="h4">Square Feet vs Energy Usage by Total Students</h4>
+      <p>Click on a point to see the school details</p>
       <ColorScatterPlot
         data={gsfVsEnergyByStudents}
         xLabel="Square Feet"
