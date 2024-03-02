@@ -23,6 +23,15 @@ const ColorScatterPlot = (props) => {
             }}
           />
         ))}
+        {selectedSchool !== null && (
+          <circle
+            cx={x(props.data[selectedSchool][0])}
+            cy={y(props.data[selectedSchool][1])}
+            fill="none"
+            stroke="yellow"
+            r={6}
+          />
+        )}
       </Plot>
       {selectedSchool !== null && <SchoolDetails school={props.schools[selectedSchool]} />}
     </>

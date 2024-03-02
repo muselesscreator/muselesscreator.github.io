@@ -23,6 +23,15 @@ const ScatterPlot = (props) => {
             }}
           />
         ))}
+        {selectedSchool !== null && (
+          <circle
+            cx={x(props.data[selectedSchool][0])}
+            cy={y(props.data[selectedSchool][1])}
+            r={6}
+            fill="none"
+            stroke="yellow"
+          />
+        )}
       </Plot>
       {selectedSchool !== null && <SchoolDetails school={props.schools[selectedSchool]} />}
     </>
