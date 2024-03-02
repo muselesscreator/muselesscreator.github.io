@@ -39,6 +39,7 @@
   "devDependencies": {
     "@muselesscreator/strict-dict": "^0.0.3",
     "@reduxjs/toolkit": "^1.5.1",
+    "@rollup/plugin-dsv": "^3.0.4",
     "@testing-library/dom": "^9.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "14.2.1",
@@ -78,8 +79,11 @@
   },
   "dependencies": {
     "@muselesscreator/use-keyed-state": "^0.2.4",
+    "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "classnames": "^2.5.1",
+    "csv": "^6.3.8",
+    "d3": "^7.8.5",
     "midi-sounds-react": "^1.2.54",
     "react-bootstrap": "^2.10.1",
     "react-icons": "^5.0.1",
