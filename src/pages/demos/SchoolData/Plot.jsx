@@ -49,13 +49,13 @@ const Plot = (props) => {
       text: label,
     })));
   } else {
-    axisTicks = axisTicks.concat(Array(10).fill(0).map((_, i) => ({
+    axisTicks = axisTicks.concat(Array(11).fill(0).map((_, i) => ({
       x1: origin[0] + (i * (innerWidth / 10)),
       y1: origin[1] + 15,
       x2: origin[0] + (i * (innerWidth / 10)),
       y2: origin[1] - 10,
     })));
-    axisLabels = axisLabels.concat(Array(10).fill(0).map((_, i) => ({
+    axisLabels = axisLabels.concat(Array(11).fill(0).map((_, i) => ({
       x: origin[0] + 4 - (innerWidth / 20) + (i * (innerWidth / 10)),
       y: origin[1] + 30 + (i % 2 === 0 ? 15 : 0),
       text: parseInt(x.domain()[0] + (i * (xRange / 10))),
@@ -64,13 +64,13 @@ const Plot = (props) => {
 
   if (yLabels) {
   } else {
-    axisTicks = axisTicks.concat(Array(10).fill(0).map((_, i) => ({
+    axisTicks = axisTicks.concat(Array(11).fill(0).map((_, i) => ({
       x1: origin[0] + 10,
       y1: origin[1] - (i * (innerHeight / 10)),
       x2: origin[0] - 15,
       y2: origin[1] - (i * (innerHeight / 10)),
     })));
-    axisLabels = axisLabels.concat(Array(10).fill(0).map((_, i) => ({
+    axisLabels = axisLabels.concat(Array(11).fill(0).map((_, i) => ({
       x: origin[0] - 60,
       y: origin[1] - (i * (innerHeight / 10)),
       text: parseInt(y.domain()[1] + (i * (yRange / 10))),

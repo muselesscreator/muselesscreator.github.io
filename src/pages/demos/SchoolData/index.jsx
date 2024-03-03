@@ -2,11 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import { useKeyedState } from '@muselesscreator/use-keyed-state';
 import { StrictDict } from '@muselesscreator/strict-dict';
+
 import data from '../../../data/buildbps.csv';
+
 import loadSchoolData from './loadSchoolData';
 import ScatterPlot from './ScatterPlot';
 import ColorScatterPlot from './ColorScatterPlot';
 import LineGraph from './LineGraph';
+import PieChart from './PieChart';
 
 const stateKeys = StrictDict({
 });
@@ -37,6 +40,15 @@ const SchoolData = () => {
     // console.log(school.studentsByGrade[grade]);
     return acc + school.studentsByGrade[grade];
   }, 0);
+  const schoolsPerType = Object.values(validSchools.reduce((acc, school) => {
+    const type = school.typology;
+    if (acc[type]) {
+      acc[type].value += 1;
+    } else {
+      acc[type] = { name: type, value: 1 };
+    }
+    return acc;
+  }, {}));
   const loadSchoolsPerGrade = grade => schools.filter(school => school.studentsByGrade[grade]).length;
   const totalStudentsPerGrade = [
     [0, loadStudentsPerGrade('preK'), loadSchoolsPerGrade('preK')],
@@ -55,7 +67,7 @@ const SchoolData = () => {
     [13, loadStudentsPerGrade('12'), loadSchoolsPerGrade(12)],
     [14, loadStudentsPerGrade('sp'), loadSchoolsPerGrade('sp')],
   ];
-  console.log({ totalStudentsPerGrade });
+  console.log({ schoolsPerType });
 
   const gradeLabels = [
     'Pre-K',
@@ -109,6 +121,9 @@ const SchoolData = () => {
         zLabel="Number of Schools"
         colors={['red', 'blue']}
         schools={schools}
+      />
+      <PieChart
+        data={schoolsPerType}
       />
 
     </div>

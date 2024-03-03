@@ -9,7 +9,7 @@ const SchoolDetails = ({ school }) => {
         <b>Name: </b>{school.name}<br />
         <b>Address: </b>{school.address}<br />
         <b>Educational Program: </b>{school.educationalProgram}<br />
-        <b>Total Square Feet: </b>{school.totalSquareFeet}<br />
+        <b>Total Square Feet: </b>{school.squareFeet}<br />
         <b>Total Students: </b>{school.totalStudents}<br />
         <b>Total Students by Grade: </b>
         <ul style={{ paddingLeft: '1rem' }}>
