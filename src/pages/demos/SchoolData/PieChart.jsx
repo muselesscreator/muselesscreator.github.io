@@ -14,9 +14,7 @@ const ScatterPlot = (props) => {
   const ref = React.useRef(null);
   const [selectedSchool, setSelectedSchool] = React.useState(null);
   const pieGenerator = d3.pie().value((d) => d.value);
-  console.log({ data: props.data });
   const pie = pieGenerator(props.data);
-  console.log({ pie });
   const arcGenerator = d3.arc();
   const shapes = pie.map((p, i) => {
     const sliceInfo = {

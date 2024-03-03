@@ -23,8 +23,6 @@ const LineGraph = (props) => {
     origin,
   ];
   const pointsString = points.map(p => p.join(',')).join(' ');
-  console.log({ pointsString });
-
   return (
     <>
       <Plot {...props}>

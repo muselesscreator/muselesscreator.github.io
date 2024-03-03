@@ -11,9 +11,6 @@ import ColorScatterPlot from './ColorScatterPlot';
 import LineGraph from './LineGraph';
 import PieChart from './PieChart';
 
-const stateKeys = StrictDict({
-});
-
 console.log({ data });
 
 const QualityKeys = StrictDict({
@@ -67,7 +64,6 @@ const SchoolData = () => {
     [13, loadStudentsPerGrade('12'), loadSchoolsPerGrade(12)],
     [14, loadStudentsPerGrade('sp'), loadSchoolsPerGrade('sp')],
   ];
-  console.log({ schoolsPerType });
 
   const gradeLabels = [
     'Pre-K',
@@ -86,8 +82,6 @@ const SchoolData = () => {
     '12th',
     'Special Ed',
   ];
-
-  console.log({ gsfVsEnergy });
 
   return (
     <div className="school-data">
