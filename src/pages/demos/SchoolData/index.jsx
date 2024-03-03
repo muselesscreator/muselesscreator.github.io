@@ -122,6 +122,8 @@ const SchoolData = () => {
         colors={['red', 'blue']}
         schools={schools}
       />
+      <hr />
+      <h4 style={{ textAlign: 'center' }} className="h4">Schools per Type</h4>
       <PieChart
         data={schoolsPerType}
       />
