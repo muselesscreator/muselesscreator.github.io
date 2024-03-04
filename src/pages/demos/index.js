@@ -1,6 +1,7 @@
 import DiceSpinners from './DiceSpinners';
 import KeyRoll from './KeyRoll';
 import SchoolData from './SchoolData';
+import SchoolCards from './SchoolCards';
 
 export const demos = [
   {
@@ -9,6 +10,13 @@ export const demos = [
     purpose: 'demonstrate proficiency with data visualization and graphicng with custom from-scratch d3.js graphs.',
     technologies: ['d3.js', 'svg', 'csv', 'react'],
     Element: SchoolData,
+  },
+  {
+    title: 'Schools Paginated Directory',
+    description: 'A home-page style layout for boston public schools data.',
+    purpose: 'demonstrate proficiency with generating sort/filterable displays from data',
+    technologies: ['react'],
+    Element: SchoolCards,
   },
   {
     title: 'Dice Spinners',

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Image } from 'react-bootstrap';
+// import { Image } from 'react-bootstrap';
 import {
   FaEnvelope,
   FaLinkedin,
