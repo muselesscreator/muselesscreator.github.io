@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {
   FaEnvelope,
   FaLinkedin,
+  FaChevronDown,
   FaGithub,
 } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa6';
@@ -24,6 +25,7 @@ const Sidebar = () => {
         </div>
         <button onClick={toggle} className="info_more-btn">
           <span>Show Contacts</span>
+          <FaChevronDown />
         </button>
       </div>
       <div className="sidebar-info_more">
