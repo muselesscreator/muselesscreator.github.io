@@ -1,25 +1,28 @@
 import React from 'react';
-import classNames from 'classnames';
-import { demos } from './demos';
-import DiceSpinners from './demos/DiceSpinners';
+
 import {
   FaChevronDown,
   FaEye,
   FaExternalLinkAlt,
 } from 'react-icons/fa';
 
+
+import classNames from 'classnames';
+import { demos } from './demos';
+import DiceSpinners from './demos/DiceSpinners';
+import Select from '~/components/Select';
+
 const Demos = () => {
   const [demoFilter, setDemoFilter] = React.useState(demos[0]);
   const handleCategoryChange = (category) => () => {
-    console.log({ category });
     setDemoFilter(category)
   };
   const { Element } = demoFilter;
-  console.log({ demoFilter });
   const demoObj = demos.reduce((acc, demo) => ({
     ...acc,
     [demo.title]: demo,
   }), {});
+  const demoOptions = demos.map(demo => ({ value: demo.title, label:  demo.title }));
   return (
     <article className="demos active">
       <header>
@@ -39,21 +42,12 @@ const Demos = () => {
           ))}
         </ul>
         <div className="filter-select-box">
-          <select
-            className="filter-select"
-            aria-label="Select category"
-            onChange={(e) => setDemoFilter(demoObj[e.target.value])}
-          >
-            <option className="select-item" disabled selected>Select category <FaChevronDown /></option>
-            {demos.map((demo) => (
-              <option
-                key={demo.title}
-                className={classNames('select-item', { active: demoFilter.title === demo.title })}
-              >
-                {demo.title} <FaChevronDown />
-              </option>
-            ))}
-          </select>
+          <Select
+            label="Select category"
+            value={demoFilter.title}
+            handleChange={(value) => setDemoFilter(demoObj[value])}
+            options={demoOptions}
+          />
         </div>
         <div
           className="demo-details"

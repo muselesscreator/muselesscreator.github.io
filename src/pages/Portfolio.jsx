@@ -10,6 +10,8 @@ import {
   RiGithubFill,
 } from 'react-icons/ri';
 
+import Select from '~/components/Select';
+
 import projects, { ProjectCategories } from '../data/projects';
 
 const ProjectCard = ({ project }) => {
@@ -91,27 +93,16 @@ const Portfolio = () => {
           </li>
         </ul>
         <div className="filter-select-box">
-          <select className="filter-select" aria-label="Select category">
-            <option className="select-item" disabled selected>Select category <FaChevronDown /></option>
-            <option
-              className={classNames('select-item', { active: projectFilter === ProjectCategories.all })}
-              onClick={handleCategoryChange(ProjectCategories.all)}
-            >
-              {ProjectCategories.all} <FaChevronDown />
-            </option>
-            <option
-              className={classNames('select-item', { active: projectFilter === ProjectCategories.public })}
-              onClick={handleCategoryChange(ProjectCategories.public)}
-            >
-              {ProjectCategories.public}<FaChevronDown />
-            </option>
-            <option
-              className={classNames('select-item', { active: projectFilter === ProjectCategories.openSource })}
-              onClick={handleCategoryChange(ProjectCategories.openSource)}
-            >
-              {ProjectCategories.openSource}<FaChevronDown />
-            </option>
-          </select>
+          <Select
+            label="Select category"
+            options={[
+              { label: ProjectCategories.all, value: ProjectCategories.all },
+              { label: ProjectCategories.public, value: ProjectCategories.public },
+              { label: ProjectCategories.openSource, value: ProjectCategories.openSource },
+            ]}
+            value={projectFilter}
+            handleChange={(value) => setProjectFilter(value)}
+          />
         </div>
         <ul className="project-list">
           {projects.filter((project) => project.category === projectFilter || projectFilter === ProjectCategories.all).map((project) => (

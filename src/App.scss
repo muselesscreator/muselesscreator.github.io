@@ -1,0 +1,32 @@
+label.mc-select-label {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fee715 !important;
+}
+.MuiSvgIcon-root {
+  color: #fee715 !important;
+}
+.MuiFormControl-root.mc-select-root {
+  background-color: #101820 !important;
+  border: 1px solid #fee715 !important;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  min-width: 100px;
+  .mc-select {
+    div[role="combobox"] {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      color: white;
+      min-width: 50px;
+    }
+  }
+}
+.mc-select-item {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+.MuiPaper-root {
+  background-color: #101820 !important;
+  border: 1px solid #fee715 !important;
+}

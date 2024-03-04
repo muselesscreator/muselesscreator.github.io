@@ -11,8 +11,6 @@ import ColorScatterPlot from './ColorScatterPlot';
 import LineGraph from './LineGraph';
 import PieChart from './PieChart';
 
-console.log({ data });
-
 const QualityKeys = StrictDict({
   poor: 'Poor',
   deficient: 'Deficient',
@@ -26,7 +24,6 @@ const SchoolData = () => {
   const validSchools = schools.filter(
     school => school.totalEnergyCost && school.squareFeet && school.totalStudents
   );
-  console.log({ schools: validSchools });
   const gsfVsEnergy = validSchools
     .map((school) => [school.squareFeet, school.totalEnergyCost]);
   const gsfVsEnergyByStudents = validSchools
@@ -34,7 +31,6 @@ const SchoolData = () => {
   const loadStudentsPerGrade = grade => validSchools
     .filter(school => school.studentsByGrade[grade])
     .reduce((acc, school) => {
-    // console.log(school.studentsByGrade[grade]);
     return acc + school.studentsByGrade[grade];
   }, 0);
   const schoolsPerType = Object.values(validSchools.reduce((acc, school) => {

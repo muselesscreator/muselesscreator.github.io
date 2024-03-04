@@ -4,9 +4,10 @@ import Modal from '@mui/material/Modal';
 import { useKeyedState } from '@muselesscreator/use-keyed-state';
 import { StrictDict } from '@muselesscreator/strict-dict';
 
+import Select from '~/components/Select';
+
 import data from '../../../data/buildbps.csv';
 import loadSchoolData from '../SchoolData/loadSchoolData';
-
 
 import SchoolCard from './SchoolCard';
 import SchoolModal from './SchoolModal';
@@ -55,12 +56,10 @@ const gradeOrders = [
 
 const SchoolCards = () => {
   const { schools, fields } = loadSchoolData(data);
-  console.log({ schools, fields });
   const programKeys = StrictDict([
     'All',
     ...fields.SMMA_Educational_Program,
   ]);
-  console.log({ programKeys });
   const [selectedSchool, setSelectedSchool] = useKeyedState(stateKeys.selectedSchool, null);
   const [page, setPage] = useKeyedState(stateKeys.page, 0);
   const [programFilter, setProgramFilter] = useKeyedState(stateKeys.programFilter, 'All');
@@ -68,7 +67,7 @@ const SchoolCards = () => {
   const [sortDirection, setSortDirection] = useKeyedState(stateKeys.sortDirection, 'asc');
 
   const filteredSchools = schools.filter(school => {
-    if (school.grades === 'None' || school.educationProgram === 'Not Assessed') {
+    if (school.grades === 'None' || school.educationalProgram === 'Not Assessed') {
       return false;
     }
     if (programFilter === 'All') {
@@ -93,7 +92,6 @@ const SchoolCards = () => {
     const gradeB = b.grades === 'None' ? 'None' : b.grades.split('-')[0];
     const aValue = gradeOrders.indexOf(gradeA);
     const bValue =gradeOrders.indexOf(gradeB);
-    console.log({ gradeA, gradeB, a, b, aValue, bValue });
     if (aValue === bValue) {
       return sortByName(a, b);
     }
@@ -132,7 +130,6 @@ const SchoolCards = () => {
       .map((_, i) => numPages - MAX_VISIBLE_PAGES + i)
       .filter(i => i >= 0);
   }
-  console.log({ pages });
 
   return (
     <div className="school-cards">
@@ -140,30 +137,28 @@ const SchoolCards = () => {
         <SchoolModal school={selectedSchool} handleClose={() => setSelectedSchool(null)} />
       )}
       <div className="filters">
-        <b>Filters</b>
-        <select
+        <p style={{ marginBottom: '10px' }}><b>Filters</b></p>
+        <Select
+          label="Educational Program"
           value={programFilter}
-          onChange={(e) => setProgramFilter(e.target.value)}
-        >
-          {Object.values(programKeys).map((program, key) => (
-            <option key={key} value={program}>{program}</option>
-          ))}
-        </select>
-        <select
+          handleChange={(value) => setProgramFilter(value)}
+          options={Object.values(programKeys).map((program) => ({ value: program, label: program }))}
+        />
+        <Select
+          label="Sort By"
           value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-        >
-          {Object.values(sortByKeys).map((sort, key) => (
-            <option key={key} value={sort}>{sortByLabels[sort]}</option>
-          ))}
-        </select>
-        <select
+          handleChange={(value) => setSortBy(value)}
+          options={Object.values(sortByKeys).map((sort, key) => ({ value: sort, label: sortByLabels[sort] }))}
+        />
+        <Select
+          label="Sort Direction"
           value={sortDirection}
-          onChange={(e) => setSortDirection(e.target.value)}
-        >
-          <option value="asc">Ascending</option>
-          <option value="desc">Descending</option>
-        </select>
+          handleChange={(value) => setSortDirection(value)}
+          options={[
+            { value: 'asc', label: 'Ascending' },
+            { value: 'desc', label: 'Descending' },
+          ]}
+        />
       </div>
       {pagedSchools.map(school => (
         <SchoolCard
