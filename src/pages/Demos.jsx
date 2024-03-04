@@ -44,7 +44,7 @@ const Demos = () => {
             aria-label="Select category"
             onChange={(e) => setDemoFilter(demoObj[e.target.value])}
           >
-            <option className="select-item">Select category <FaChevronDown /></option>
+            <option className="select-item" disabled selected>Select category <FaChevronDown /></option>
             {demos.map((demo) => (
               <option
                 key={demo.title}

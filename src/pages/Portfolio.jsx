@@ -92,7 +92,7 @@ const Portfolio = () => {
         </ul>
         <div className="filter-select-box">
           <select className="filter-select" aria-label="Select category">
-            <option className="select-item">Select category <FaChevronDown /></option>
+            <option className="select-item" disabled selected>Select category <FaChevronDown /></option>
             <option
               className={classNames('select-item', { active: projectFilter === ProjectCategories.all })}
               onClick={handleCategoryChange(ProjectCategories.all)}
