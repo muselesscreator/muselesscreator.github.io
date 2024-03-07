@@ -24,7 +24,7 @@ const Sidebar = () => {
           <p className="title">{contactInfo.title}</p>
         </div>
         <button onClick={toggle} className="info_more-btn">
-          <span>Show Contacts</span>
+          <span>Show Contacts </span>
           <FaChevronDown />
         </button>
       </div>

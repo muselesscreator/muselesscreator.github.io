@@ -81,6 +81,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.11",
+    "@muselesscreator/react-shallow-snapshot": "^0.2.2",
     "@muselesscreator/use-keyed-state": "^0.2.4",
     "axios": "^1.6.7",
     "classnames": "^2.5.1",

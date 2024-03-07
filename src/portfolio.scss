@@ -135,7 +135,7 @@ em {
   font-style: italic;
 }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, svg, a, button, time, span { display: block; }
 
 button {
   font: inherit;
@@ -212,7 +212,7 @@ article {
   z-index: -1;
 }
 
-.icon-box ion-icon { --ionicon-stroke-width: 35px; }
+.icon-box svg { --ionicon-stroke-width: 35px; }
 
 article { display: none; }
 
@@ -746,7 +746,7 @@ article.demos {
 .modal-close-btn:hover,
 .modal-close-btn:focus { opacity: 1; }
 
-.modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
+.modal-close-btn svg { --ionicon-stroke-width: 50px; }
 
 .modal-avatar-box {
   background: var(--bg-gradient-onyx);
@@ -1099,7 +1099,7 @@ b.timeline-text {
   }
 }
 
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+.project-item-icon-box svg { --ionicon-stroke-width: 50px; }
 
 .project-img img {
   width: 100%;
@@ -1317,7 +1317,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   transition: var(--transition-1);
 }
 
-.form-btn ion-icon { font-size: 16px; }
+.form-btn svg { font-size: 16px; }
 
 .form-btn:hover { background: var(--bg-gradient-yellow-1); }
 
@@ -1467,7 +1467,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: var(--fs-8);
   }
 
-  .info_more-btn ion-icon { display: none; }
+  .info_more-btn svg { display: none; }
 
   .separator { margin: 32px 0; }
 
@@ -1648,7 +1648,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 16px 20px;
   }
 
-  .form-btn ion-icon { font-size: 18px; }
+  .form-btn svg { font-size: 18px; }
 
 }
 

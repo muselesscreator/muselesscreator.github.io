@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Select component > render > snapshot 1`] = `
+"<FormControl
+  className="mc-select-root"
+>
+  <InputLabel
+    className="mc-select-label"
+    id="test-label-id"
+  >
+    test-label
+  </InputLabel>
+  <MuiSelect
+    className="filter-select mc-select"
+    id="test-input-id"
+    label="Select category"
+    labelId="test-label-id"
+    multiple="test-multiple"
+    onChange={[Function hookProps.onChange]}
+    value="test-value-1"
+  >
+    <MenuItem
+      className="mc-select-item"
+      value="test-value1"
+    >
+      Test label1
+    </MenuItem>
+    <MenuItem
+      className="mc-select-item"
+      value="test-value2"
+    >
+      Test label2
+    </MenuItem>
+    <MenuItem
+      className="mc-select-item"
+      value="test-value3"
+    >
+      Test label3
+    </MenuItem>
+  </MuiSelect>
+</FormControl>"
+`;

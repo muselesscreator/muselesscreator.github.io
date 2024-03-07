@@ -1,37 +1,40 @@
 import React from 'react';
-import { v4 as uuid } from 'uuid';
 
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MuiSelect from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
-import classNames from 'classnames';
+import useSelectData from './useSelectData';
 
 const Select = ({
   label,
   options,
   value,
   handleChange,
+  multiple,
 }) => {
-  const id = uuid();
+  const {
+    labelId,
+    inputId,
+    onChange,
+  } = useSelectData({ handleChange });
   return (
     <FormControl className="mc-select-root">
       <InputLabel
-      className="mc-select-label"
-      id={`mc-select-label-${id}`}
-    >
-      {label}
-    </InputLabel>
+        className="mc-select-label"
+        id={labelId}
+      >
+        {label}
+      </InputLabel>
       <MuiSelect
-        labelId={`mc-select-label-${id}`}
+        labelId={labelId}
         className="filter-select mc-select"
-        id={`mc-select-${id}`}
+        id={inputId}
         value={value}
         label="Select category"
-        onChange={(e) => {
-          return handleChange(e.target.value);
-        }}
+        multiple={multiple}
+        onChange={onChange}
       >
         {options.map(({ value, label }) => (
           <MenuItem
