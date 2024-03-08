@@ -19,6 +19,7 @@ describe('useSelectData', () => {
     expect(out.labelId).toEqual(selectLabelId(id));
     expect(out.inputId).toEqual(selectInputId(id));
     const value = 'test-value';
-    expect(out.onChange({ target: { value } })).toEqual(props.handleChange(value));
+    if (out.onChange === undefined) throw new Error('onChange is undefined');
+    expect(out.onChange({ target: { value } }, 1)).toEqual(props.handleChange(value));
   });
 });

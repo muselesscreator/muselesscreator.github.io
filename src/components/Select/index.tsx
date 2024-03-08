@@ -10,9 +10,9 @@ type Props = {
   label: string;
   options: { value: string; label: string }[];
   value: string | undefined;
-  handleChange: (value: string | string[]) => void;
+  handleChange: (value: unknown) => void,
   multiple?: boolean;
-}
+};
 
 const Select = ({
   label,

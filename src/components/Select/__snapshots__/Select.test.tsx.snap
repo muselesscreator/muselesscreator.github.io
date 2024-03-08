@@ -15,7 +15,7 @@ exports[`Select component > render > snapshot 1`] = `
     id="test-input-id"
     label="Select category"
     labelId="test-label-id"
-    multiple="test-multiple"
+    multiple={true}
     onChange={[Function hookProps.onChange]}
     value="test-value-1"
   >

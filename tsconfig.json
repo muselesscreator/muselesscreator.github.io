@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "src/*": ["src/*"],
+      "~/*": ["src/*"],
       "@muselesscreator/*": ["node_modules/@muselesscreator/*"]
     },
     "types": ["vite/client"],

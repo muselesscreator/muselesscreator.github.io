@@ -54,12 +54,6 @@ describe('Select component', () => {
     test('snapshot', () => {
       const el = shallow(<Select {...props} />);
       instance = el.instance;
-      els = {
-        FormControl: instance.findByType('FormControl')[0],
-        InputLabel: instance.findByType('InputLabel')[0],
-        MuiSelect: instance.findByType('MuiSelect')[0],
-        MenuItem: instance.findByType('MenuItem')[0],
-      };
       expect(el.snapshot).toMatchSnapshot();
     });
     test('render form control with children', () => {
@@ -68,8 +62,6 @@ describe('Select component', () => {
       els = {
         FormControl: instance.findByType('FormControl')[0],
         InputLabel: instance.findByType('InputLabel')[0],
-        MuiSelect: instance.findByType('MuiSelect')[0],
-        MenuItem: instance.findByType('MenuItem')[0],
       };
       expect(els.FormControl.children[0].matches(els.InputLabel)).toBe(true);
       expect(els.InputLabel.props.id).toEqual(hookProps.labelId);
@@ -82,9 +74,7 @@ describe('Select component', () => {
       instance = el.instance;
       els = {
         FormControl: instance.findByType('FormControl')[0],
-        InputLabel: instance.findByType('InputLabel')[0],
         MuiSelect: instance.findByType('MuiSelect')[0],
-        MenuItem: instance.findByType('MenuItem')[0],
       };
       const selectProps = els.MuiSelect.props;
       expect(selectProps.labelId).toEqual(hookProps.labelId);
@@ -93,8 +83,9 @@ describe('Select component', () => {
       expect(selectProps.value).toEqual(props.value);
       expect(selectProps.multiple).toEqual(props.multiple);
       expect(els.MuiSelect.children).toHaveLength(props.options.length);
+
       props.options.forEach((option, i) => {
-        const selectEl = els.FormControl.children[i].el as typeof ExplorerData;
+        const selectEl = els.MuiSelect.children[i].el as typeof ExplorerData;
         expect(selectEl.type).toEqual('MenuItem');
         expect(els.MuiSelect.children[i].props.value).toEqual(option.value);
         expect(els.MuiSelect.children[i].children[0].el).toEqual(option.label);
