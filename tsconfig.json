@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "@muselesscreator/*": ["node_modules/@muselesscreator/*"]
+    },
     "types": ["vite/client"],
     "target": "ES2021",
     "useDefineForClassFields": true,
@@ -8,6 +13,8 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

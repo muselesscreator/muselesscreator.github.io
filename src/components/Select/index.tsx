@@ -1,5 +1,4 @@
-import React from 'react';
-
+import 'react';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MuiSelect from '@mui/material/Select';
@@ -7,13 +6,21 @@ import MenuItem from '@mui/material/MenuItem';
 
 import useSelectData from './useSelectData';
 
+type Props = {
+  label: string;
+  options: { value: string; label: string }[];
+  value: string | undefined;
+  handleChange: (value: string | string[]) => void;
+  multiple?: boolean;
+}
+
 const Select = ({
   label,
   options,
   value,
   handleChange,
   multiple,
-}) => {
+}: Props) => {
   const {
     labelId,
     inputId,
