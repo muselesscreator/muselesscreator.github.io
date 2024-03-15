@@ -6,12 +6,12 @@ const stateKeys = StrictDict({
   fullname: 'fullname',
   email: 'email',
   message: 'message',
-});
+}) as Record<string, string>;
 
 const useContactData = () => {
-  const [fullname, setFullname] = useKeyedState(stateKeys.fullname, '');
-  const [email, setEmail] = useKeyedState(stateKeys.email, '');
-  const [message, setMessage] = useKeyedState(stateKeys.message, '');
+  const [fullname, setFullname] = useKeyedState<string>(stateKeys.fullname, '');
+  const [email, setEmail] = useKeyedState<string>(stateKeys.email, '');
+  const [message, setMessage] = useKeyedState<string>(stateKeys.message, '');
 
   const isValid = fullname && email && message;
 
