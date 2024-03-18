@@ -1,7 +1,18 @@
 import { StrictDict } from '@muselesscreator/strict-dict';
 import avatar from '../assets/ampersand.png';
 
-const contactInfo = ({
+export type ContactInfo = {
+  name: string;
+  email: string;
+  title: string;
+  phone: string;
+  phoneRaw: string;
+  github: string;
+  linkedIn: string;
+  avatar: string;
+};
+
+const contactInfo = StrictDict({
   name: 'Ben Warzeski',
   email: 'bwarzesk@gmail.com',
   title: 'Full-Stack Software Engineer',
@@ -10,6 +21,6 @@ const contactInfo = ({
   github: 'https://www.github.com/muselesscreator',
   linkedIn: 'https://www.linkedin.com/in/benjamin-warzeski-69111518/',
   avatar,
-});
+}) as ContactInfo;
 
 export default contactInfo;

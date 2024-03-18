@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { pages, pageNames } from '../data/pages';
 
 
-const Navbar = ({ activePage }) => {
-  const navEntry = (page) => {
+const Navbar = ({ activePage }: { activePage: string }) => {
+  const navEntry = (page: string) => {
     return (
       <li key={page} className="navbar-item">
         <NavLink

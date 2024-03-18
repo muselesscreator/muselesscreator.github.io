@@ -1,22 +1,17 @@
-import React from 'react';
-import { useLocation, Routes, Route } from 'react-router-dom';
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+
+
+import Sidebar from '~/components/Sidebar';
+import Navbar from '~/components/Navbar';
+import PageArticle from '~/components/PageArticle';
+import { pages } from '~/data/pages';
+
+import useAppData from './useAppData';
 import './App.scss';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/Navbar';
-import PageArticle from './components/PageArticle';
-import { pages } from './data/pages';
 
 
 function App() {
-  const loadedPath = useLocation().pathname.slice(1);
-  const effectivePage = loadedPath === '' ? pages.about : pages[loadedPath];
-  const [activePage, setActivePage] = React.useState(
-    loadedPath  !== '' ? pages[loadedPath] : pages.about);
-  React.useEffect(() => {
-    setActivePage(effectivePage);
-  }, [effectivePage, setActivePage]);
-  console.log({ activePage });
+  const { activePage } = useAppData();
   return (
     <main>
       <Sidebar />

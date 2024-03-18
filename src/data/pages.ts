@@ -7,7 +7,7 @@ export const pages = StrictDict({
   portfolio: 'portfolio',
   demo: 'demo',
   blog: 'blog',
-});
+}) as Record<string, string>;
 
 export const pageNames = StrictDict({
   [pages.about]: 'About',
@@ -16,6 +16,6 @@ export const pageNames = StrictDict({
   [pages.portfolio]: 'Portfolio',
   [pages.blog]: 'Blog',
   [pages.demo]: 'Demos',
-});
+}) as Record<string, string>;
 
 export default pages;
