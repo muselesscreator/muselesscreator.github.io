@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContactList > renders correctly 1`] = `
+"<ul
+  className="contacts-list"
+>
+  <ContactItem
+    IconEl="FaEnvelopeIcon"
+    href="mailto:bwarzesk@gmail.com"
+    title="Email"
+    value="bwarzesk@gmail.com"
+  />
+  <ContactItem
+    IconEl="FaPhoneIcon"
+    href="tel:19413875092"
+    title="Phone"
+    value="+1 (941) 387-5092"
+  />
+  <ContactItem
+    IconEl="FaGithubIcon"
+    href="https://www.github.com/muselesscreator"
+    title="Github"
+    value="https://www.github.com/muselesscreator"
+  />
+  <ContactItem
+    IconEl="FaLinkedinIcon"
+    href="https://www.linkedin.com/in/benjamin-warzeski-69111518/"
+    title="LinkedIn"
+    value="https://www.linkedin.com/in/benjamin-warzeski-69111518/"
+  />
+</ul>"
+`;

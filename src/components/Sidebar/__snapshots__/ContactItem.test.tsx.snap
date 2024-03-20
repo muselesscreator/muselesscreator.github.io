@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContactItem > renders correctly 1`] = `
+"<li
+  className="contact-item"
+>
+  <div
+    className="icon-box"
+  >
+    test-icon
+  </div>
+  <div
+    className="contact-info"
+  >
+    <p
+      className="contact-title"
+    >
+      test-title
+    </p>
+    <a
+      className="contact-link"
+      href="test-href"
+    >
+      test-value
+    </a>
+  </div>
+</li>"
+`;

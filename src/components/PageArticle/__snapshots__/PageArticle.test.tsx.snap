@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageArticle component > should render About page if activePage is about 1`] = `"<About />"`;
+
+exports[`PageArticle component > should render Contact page if activePage is contact 1`] = `"<Contact />"`;
+
+exports[`PageArticle component > should render Demos page if activePage is demos 1`] = `"<Demos />"`;
+
+exports[`PageArticle component > should render Portfolio page if activePage is portfolio 1`] = `"<Portfolio />"`;
+
+exports[`PageArticle component > should render Resume page if activePage is resume 1`] = `"<Resume />"`;

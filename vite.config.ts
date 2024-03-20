@@ -1,5 +1,4 @@
-import { defineTestConfig } from 'vitest/config'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
 import dsv from '@rollup/plugin-dsv'
 
@@ -10,15 +9,13 @@ export default defineConfig({
       '~' : '/src',
       '~/components': '/src/components',
       '~/data': '/src/data',
+      '~/pages': '/src/pages',
     },
   },
   plugins: [
     dsv(),
     react(),
   ],
-  test: {
-    environment: 'jsdom',
-  },
   build: {
     commonjsOptions: {
       transformMixedEsModules: true

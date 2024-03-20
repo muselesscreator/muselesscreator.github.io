@@ -1,12 +1,11 @@
-import 'react';
-import About from '../pages/About';
-import Contact from '../pages/Contact';
-import Portfolio from '../pages/Portfolio';
-import Resume from '../pages/Resume';
-import Demos from '../pages/Demos';
-import { pages } from '../data/pages';
+import About from '~/pages/About';
+import Contact from '~/pages/Contact';
+import Portfolio from '~/pages/Portfolio';
+import Resume from '~/pages/Resume';
+import Demos from '~/pages/Demos';
+import { pages } from '~/data/pages';
 
-const articleComponents = {
+export const articleComponents = {
   [pages.about]: About,
   [pages.contact]: Contact,
   [pages.portfolio]: Portfolio,

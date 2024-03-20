@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavEntry component > active entry > snapshot 1`] = `
+"<li
+  className="navbar-item"
+>
+  <NavLink
+    className="navbar-link active"
+    to="/about"
+  >
+    About
+  </NavLink>
+</li>"
+`;
+
+exports[`NavEntry component > inactive entry > snapshot 1`] = `
+"<li
+  className="navbar-item"
+>
+  <NavLink
+    className="navbar-link"
+    to="/about"
+  >
+    About
+  </NavLink>
+</li>"
+`;

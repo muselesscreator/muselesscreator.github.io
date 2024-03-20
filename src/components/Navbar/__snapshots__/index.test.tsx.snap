@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavBar component > about page snapshot 1`] = `
+"<nav
+  className="navbar"
+>
+  <ul
+    className="navbar-list"
+  >
+    <NavEntry
+      isActive={true}
+      page="about"
+    />
+    <NavEntry
+      isActive={false}
+      page="resume"
+    />
+    <NavEntry
+      isActive={false}
+      page="portfolio"
+    />
+    <NavEntry
+      isActive={false}
+      page="demo"
+    />
+    <NavEntry
+      isActive={false}
+      page="contact"
+    />
+  </ul>
+</nav>"
+`;
