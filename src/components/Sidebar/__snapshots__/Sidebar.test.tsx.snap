@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Sidebar component > snapshot 1`] = `
+"<aside
+  className="sidebar active"
+>
+  <div
+    className="sidebar-info"
+  >
+    <UserAvatar />
+    <UserInfo />
+    <button
+      className="info_more-btn"
+      onClick={[Function hookProps.toggle]}
+    >
+      <span>
+        Show Contacts 
+      </span>
+      <FaChevronDownIcon />
+    </button>
+  </div>
+  <div
+    className="sidebar-info_more"
+  >
+    <div
+      className="separator"
+    />
+    <ContactList />
+  </div>
+</aside>"
+`;
+
+exports[`Sidebar component > snapshot includes user name and title 1`] = `
+"<aside
+  className="sidebar active"
+>
+  <div
+    className="sidebar-info"
+  >
+    <UserAvatar />
+    <UserInfo />
+    <button
+      className="info_more-btn"
+      onClick={[Function hookProps.toggle]}
+    >
+      <span>
+        Show Contacts 
+      </span>
+      <FaChevronDownIcon />
+    </button>
+  </div>
+  <div
+    className="sidebar-info_more"
+  >
+    <div
+      className="separator"
+    />
+    <ContactList />
+  </div>
+</aside>"
+`;

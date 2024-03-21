@@ -9,8 +9,7 @@ const useAppData = (): { activePage: string } => {
 
   const effectivePage = loadedPath === '' ? pages.about : pages[loadedPath];
 
-  const [activePage, setActivePage] = React.useState(
-    loadedPath  !== '' ? pages[loadedPath] : pages.about);
+  const [activePage, setActivePage] = React.useState(effectivePage);
 
   React.useEffect(() => {
     setActivePage(effectivePage);

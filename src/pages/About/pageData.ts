@@ -1,8 +1,9 @@
-type StringField = { type: 'text', text: string };
-type ListField = { type: 'list', items: string[] };
+export type StringField = { type: 'text', text: string };
+export type ListField = { type: 'list', items: string[] };
+export type PageField = StringField | ListField;
 type PageData = {
   title: string;
-  fields: (StringField | ListField)[];
+  fields: PageField[];
 };
 const pageData = {
   title: 'About me',

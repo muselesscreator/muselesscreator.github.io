@@ -1,0 +1,128 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > output > snapshot 1`] = `
+"<main>
+  <Sidebar />
+  <div
+    className="main-content"
+  >
+    <Navbar
+      activePage="test-page"
+    />
+    <Routes>
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "about",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/"
+      />
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "about",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/about"
+      />
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "resume",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/resume"
+      />
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "portfolio",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/portfolio"
+      />
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "contact",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/contact"
+      />
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "demo",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/demo"
+      />
+      <Route
+        element={
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "activePage": "blog",
+            },
+            "ref": null,
+            "type": "PageArticle",
+          }
+        }
+        path="/blog"
+      />
+    </Routes>
+  </div>
+</main>"
+`;

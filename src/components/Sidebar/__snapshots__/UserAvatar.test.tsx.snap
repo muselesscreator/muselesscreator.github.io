@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UserAvatar component > snapshot includes user avatar 1`] = `
+"<figure
+  className="avatar-box"
+>
+  <img
+    alt="Ben Warzeski"
+    src="/src/assets/ampersand.png"
+    width="80"
+  />
+</figure>"
+`;

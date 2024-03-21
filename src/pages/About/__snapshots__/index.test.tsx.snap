@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`About page > snapshot 1`] = `
+"<article
+  className="about active"
+>
+  <header>
+    <h2
+      className="h2 article-title"
+    >
+      Test Title
+    </h2>
+  </header>
+  <div
+    className="about-text"
+  >
+    <p>
+      test text 1
+    </p>
+    <p>
+      test text 2
+    </p>
+    <p>
+      test text 3
+    </p>
+    <ul>
+      <li>
+        test item 1
+      </li>
+      <li>
+        test item 2
+      </li>
+      <li>
+        test item 3
+      </li>
+    </ul>
+  </div>
+</article>"
+`;

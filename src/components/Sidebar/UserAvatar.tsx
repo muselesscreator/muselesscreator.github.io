@@ -1,16 +1,9 @@
-type UserAvatarProps = {
-  contactInfo: {
-    name: string;
-    avatar: string;
-  };
-}
+import contactInfo from '~/data/contact';
 
-const UserAvatar = ({ contactInfo }: UserAvatarProps) => {
-  return (
-    <figure className="avatar-box">
-      <img src={contactInfo.avatar} alt={contactInfo.name} width="80" />
-    </figure>
-  );
-};
+const UserAvatar = () => (
+  <figure className="avatar-box">
+    <img src={contactInfo.avatar} alt={contactInfo.name} width="80" />
+  </figure>
+);
 
 export default UserAvatar;

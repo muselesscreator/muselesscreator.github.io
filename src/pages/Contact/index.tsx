@@ -1,20 +1,36 @@
-import 'react';
-
 import SendIcon from '@mui/icons-material/Send';
 
 import useContactData from './useContactData';
 
-const About = () => {
+export const formAction = 'https://formspree.io/f/mkndboev';
+
+const Contact = () => {
   const {
     fullname,
     email,
     message,
     isValid,
-    formAction,
     handleNameChange,
     handleEmailChange,
     handleMessageChange,
   } = useContactData();
+
+  const inputs = [
+    {
+      type: 'text',
+      name: 'fullname',
+      placeholder: 'Full name',
+      value: fullname,
+      onChange: handleNameChange,
+    },
+    {
+      type: 'email',
+      name: 'email',
+      placeholder: 'Email address',
+      value: email,
+      onChange: handleEmailChange,
+    },
+  ];
 
   return (
     <article className="contact active">
@@ -25,24 +41,18 @@ const About = () => {
         <h3 className="h3 form-title">Contact Form</h3>
         <form method="POST" action={formAction} className="form" data-form>
           <div className="input-wrapper">
-            <input
-              type="text"
-              name="fullname"
-              className="form-input"
-              placeholder="Full name"
-              required
-              value={fullname as string}
-              onChange={handleNameChange}
-            />
-            <input
-              type="email"
-              name="email"
-              className="form-input"
-              placeholder="Email address"
-              required
-              value={email as string}
-              onChange={handleEmailChange}
-            />
+            {...inputs.map((input) => (
+              <input
+                key={input.name}
+                type={input.type}
+                name={input.name}
+                className="form-input"
+                placeholder={input.placeholder}
+                required
+                value={input.value as string}
+                onChange={input.onChange}
+              />
+            ))}
           </div>
           <textarea
             name="message"
@@ -62,4 +72,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

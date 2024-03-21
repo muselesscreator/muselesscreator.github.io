@@ -10,6 +10,16 @@ import useAppData from './useAppData';
 import './App.scss';
 
 
+export const routes = [
+  { path: '/', page: pages.about },
+  { path: '/about', page: pages.about },
+  { path: '/resume', page: pages.resume },
+  { path: '/portfolio', page: pages.portfolio },
+  { path: '/contact', page: pages.contact },
+  { path: '/demo', page: pages.demo },
+  { path: '/blog', page: pages.blog },
+];
+
 function App() {
   const { activePage } = useAppData();
   return (
@@ -18,13 +28,9 @@ function App() {
       <div className="main-content">
         <Navbar activePage={activePage} />
         <Routes>
-          <Route path="/" element={<PageArticle activePage={pages.about} />} />
-          <Route path="/about" element={<PageArticle activePage={pages.about} />} />
-          <Route path="/resume" element={<PageArticle activePage={pages.resume} />} />
-          <Route path="/portfolio" element={<PageArticle activePage={pages.portfolio} />} />
-          <Route path="/contact" element={<PageArticle activePage={pages.contact} />} />
-          <Route path="/demo" element={<PageArticle activePage={pages.demo} />} />
-          <Route path="/blog" element={<PageArticle activePage={pages.blog} />} />
+          {routes.map(({ path, page }) => (
+            <Route key={path} path={path} element={<PageArticle activePage={page} />} />
+          ))}
         </Routes>
       </div>
     </main>

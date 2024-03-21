@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import { FaChevronDown } from 'react-icons/fa';
-import contactInfo from '~/data/contact';
 
 import useSidebarData from './useSidebarData';
 import ContactList from './ContactList';
@@ -12,8 +11,8 @@ const Sidebar = () => {
   return (
     <aside className={classNames('sidebar', { active: isActive })}>
       <div className="sidebar-info">
-        <UserAvatar contactInfo={contactInfo} />
-        <UserInfo contactInfo={contactInfo} />
+        <UserAvatar />
+        <UserInfo />
         <button onClick={toggle} className="info_more-btn">
           <span>Show Contacts </span>
           <FaChevronDown />
@@ -21,7 +20,7 @@ const Sidebar = () => {
       </div>
       <div className="sidebar-info_more">
         <div className="separator" />
-        <ContactList contactInfo={contactInfo} />
+        <ContactList />
       </div>
     </aside>
   );
