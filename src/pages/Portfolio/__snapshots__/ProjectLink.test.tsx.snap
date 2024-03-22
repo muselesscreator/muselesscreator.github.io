@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProjectLink > snapshot 1`] = `
+"<p>
+  <div>
+    IconComponent
+  </div>
+  :
+  <a
+    className="project-link"
+    href="test-href"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Test Label
+  </a>
+</p>"
+`;

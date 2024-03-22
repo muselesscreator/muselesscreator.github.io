@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProjectLinks > snapshot 1`] = `
+"<div
+  className="project-links"
+>
+  <ProjectLink
+    IconComponent="RiGithubFillIcon"
+    href="github-url"
+    label="github-repo"
+  />
+  <ProjectLink
+    IconComponent="RiNpmjsFillIcon"
+    href="package-url"
+    label="package-name"
+  />
+</div>"
+`;

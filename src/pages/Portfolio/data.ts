@@ -7,19 +7,7 @@ import useKeyedStateImg from '../../assets/useKeyedState.png';
 import oraGradingImg from '../../assets/oraGrading.png';
 
 import { StrictDict } from '@muselesscreator/strict-dict';
-export type ProjectData = {
-  title: string;
-  description: string;
-  category: string;
-  githubUrl: string;
-  githubRepo: string;
-  packageName?: string;
-  packageUrl?: string;
-  screenshots?: string[];
-  details?: string;
-  image?: string;
-  projectUrl: string;
-};
+import { ProjectData } from './types';
 
 export const ProjectCategories = StrictDict({
   openSource: 'Open Source Contributions',

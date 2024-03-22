@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   vi,
   beforeEach,
@@ -8,7 +7,7 @@ import {
   Mock,
 } from 'vitest';
 
-import useContactData, { stateKeys, ContactData } from './useContactData';
+import useContactData, { stateKeys } from './useContactData';
 import { useKeyedState } from '@muselesscreator/use-keyed-state';
 
 vi.mock('@muselesscreator/use-keyed-state', () => ({
@@ -37,6 +36,7 @@ const mockUseKeyedState = (key: string, val: unknown): [string, () => void] => {
   return [stateValues[key], setState[key]];
 };
 (useKeyedState as Mock).mockImplementation(mockUseKeyedState);
+
 describe('useContactData hook', () => {
   beforeEach(() => {
     vi.clearAllMocks();

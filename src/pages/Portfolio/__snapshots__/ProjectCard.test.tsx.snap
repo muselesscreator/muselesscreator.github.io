@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProjectCard > snapshot 1`] = `
+"<a
+  href="project-url"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <figure
+    className="project-img"
+  >
+    <div
+      className="project-item-icon-box"
+    >
+      <p>
+        Project Description
+      </p>
+      <FaEyeIcon />
+    </div>
+    <img
+      alt="Project Title"
+      loading="lazy"
+    />
+  </figure>
+  <h4
+    className="project-title"
+  >
+    Project Title
+  </h4>
+  <p
+    className="project-category"
+  >
+    Project Category
+  </p>
+</a>"
+`;

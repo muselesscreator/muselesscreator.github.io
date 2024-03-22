@@ -1,0 +1,11 @@
+.project-item {
+  .project-links {
+    svg {
+      transform: translate(0, 2px);
+      display: inline-block;
+    }
+    a {
+      margin-left: 5px;
+    }
+  }
+}

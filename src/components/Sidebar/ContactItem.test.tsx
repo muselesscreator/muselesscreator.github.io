@@ -20,10 +20,8 @@ describe('ContactItem', () => {
   test('renders correctly', () => {
     const el = shallow(<ContactItem {...props} />);
     expect(el.snapshot).toMatchSnapshot();
-    console.log({ el });
     const [iconBox, contactInfo] = el.instance.children;
     expect(iconBox.children).toHaveLength(1);
-    console.log({ iconBoxChildren: iconBox.children });
     expect(iconBox.children[0].el).toEqual(testIcon);
     expect(contactInfo.children).toHaveLength(2);
     expect(contactInfo.children[0].children[0].el).toEqual(props.title);

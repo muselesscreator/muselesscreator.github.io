@@ -20,7 +20,7 @@ export const routes = [
   { path: '/blog', page: pages.blog },
 ];
 
-function App() {
+export const App = () => {
   const { activePage } = useAppData();
   return (
     <main>
@@ -35,6 +35,6 @@ function App() {
       </div>
     </main>
   );
-}
+};
 
 export default App;

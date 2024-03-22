@@ -1,0 +1,70 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Portfolio page > snapshot 1`] = `
+"<article
+  className="portfolio active"
+>
+  <header>
+    <h2
+      className="h2 article-title"
+    >
+      Portfolio
+    </h2>
+  </header>
+  <section
+    className="projects"
+  >
+    <ProjectFilters
+      handleCategoryChange={[Function hookProps.handleCategoryChange]}
+      handleFilterChange={[Function hookProps.handleFilterChange]}
+      projectFilter="test-project-filter"
+    />
+    <ul
+      className="project-list"
+    >
+      <li
+        className="project-item active"
+      >
+        <ProjectCard
+          title="project1-title"
+          type="project1-type"
+          value="project1-value"
+        />
+        <ProjectLinks
+          title="project1-title"
+          type="project1-type"
+          value="project1-value"
+        />
+      </li>
+      <li
+        className="project-item active"
+      >
+        <ProjectCard
+          title="project2-title"
+          type="project2-type"
+          value="project2-value"
+        />
+        <ProjectLinks
+          title="project2-title"
+          type="project2-type"
+          value="project2-value"
+        />
+      </li>
+      <li
+        className="project-item active"
+      >
+        <ProjectCard
+          title="project3-title"
+          type="project3-type"
+          value="project3-value"
+        />
+        <ProjectLinks
+          title="project3-title"
+          type="project3-type"
+          value="project3-value"
+        />
+      </li>
+    </ul>
+  </section>
+</article>"
+`;

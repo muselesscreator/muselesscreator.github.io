@@ -1,58 +1,36 @@
-import {
-  FaEye,
-} from 'react-icons/fa';
-import {
-  RiNpmjsFill,
-  RiGithubFill,
-} from 'react-icons/ri';
+import { FaEye } from 'react-icons/fa';
 
-import { ProjectData } from './data';
+import { StrictDict } from '@muselesscreator/strict-dict';
 
-type Props = {
-  project: ProjectData,
-}
-const ProjectCard = ({ project }: Props) => {
-  const {
-    title,
-    description,
-    category,
-    githubUrl,
-    githubRepo,
-    packageName,
-    packageUrl,
-    image,
-    projectUrl,
-  } = project;
-  const githubLink = (
-    <a href={githubUrl} className="project-link" target="_blank" rel="noopener noreferrer">
-      {githubRepo}
-    </a>
-  );
-  const npmLink = (
-    <a href={packageUrl} className="project-link" target="_blank" rel="noopener noreferrer">
-      {packageName}
-    </a>
-  );
-  return (
-    <li className="project-item active">
-      <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-        <figure className="project-img">
-          <div className="project-item-icon-box">
-            <p>{description}</p>
-            <FaEye />
-          </div>
-          <img src={image} alt={title} loading="lazy" />
-        </figure>
-        <h4 className="project-title">{title}</h4>
-        <p className="project-category">{category}</p>
-      </a>
-      <div className="project-links">
-        <p><RiGithubFill style={{ transform: 'translate(0, 2px)' }}/>: {githubLink}</p>
-        <p><RiNpmjsFill style={{ transform: 'translate(0, 2px)' }}/>: {npmLink}</p>
+import { ProjectData } from './types';
+
+
+export const classNames = StrictDict({
+  img: 'project-img',
+  iconBox: 'project-item-icon-box',
+  title: 'project-title',
+  category: 'project-category',
+}) as Record<string, string>;
+
+const ProjectCard = ({
+  title,
+  description,
+  category,
+  image,
+  projectUrl,
+}: ProjectData) => (
+  <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+    <figure className={classNames.img}>
+      <div className={classNames.iconBox}>
+        <p>{description}</p>
+        <FaEye />
       </div>
-    </li>
-  );
-};
+      <img src={image} alt={title} loading="lazy" />
+    </figure>
+    <h4 className={classNames.title}>{title}</h4>
+    <p className={classNames.category}>{category}</p>
+  </a>
+);
 
 export default ProjectCard;
 

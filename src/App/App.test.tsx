@@ -12,11 +12,11 @@ import { shallow, ExplorerData } from '@muselesscreator/react-shallow-snapshot';
 import useAppData from './useAppData';
 import App, { routes } from '.';
 
-vi.mock('./useAppData', () => ({ default: vi.fn() }));
+vi.mock('react-router-dom', () => ({ Routes: 'Routes', Route: 'Route' }));
 vi.mock('~/components/Sidebar', () => ({ default: 'Sidebar' }));
 vi.mock('~/components/Navbar', () => ({ default: 'Navbar' }));
 vi.mock('~/components/PageArticle', () => ({ default: 'PageArticle' }));
-vi.mock('react-router-dom', () => ({ Routes: 'Routes', Route: 'Route' }));
+vi.mock('./useAppData', () => ({ default: vi.fn() }));
 
 const hookProps = { activePage: 'test-page' };
 (useAppData as Mock).mockReturnValue(hookProps);
@@ -44,10 +44,12 @@ describe('App', () => {
     it('renders a Route for each route', () => {
       const routeEls = el.instance.findByType('Route');
       expect(routeEls).toHaveLength(routes.length);
-      routes.forEach((route, i) => {
-        expect(routeEls[i].props.path).toBe(route.path);
-        expect(routeEls[i].props.element.type).toBe('PageArticle');
-        expect(routeEls[i].props.element.props.activePage).toBe(route.page);
+      routeEls.forEach((_: typeof ExplorerData, i: number) => {
+        const { props } = routeEls[i];
+        const element = props.element;
+        expect(props.path).toBe(routes[i].path);
+        expect(element.type).toBe('PageArticle');
+        expect(element.props.activePage).toBe(routes[i].page);
       });
     });
   });
