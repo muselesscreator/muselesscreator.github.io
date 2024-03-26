@@ -20,7 +20,7 @@ describe('ProjectLink', () => {
     const el = shallow(<ProjectLink  {...props} />);
     expect(el.snapshot).toMatchSnapshot();
     const { children } = el.instance.findByType('p')[0];
-    const expected = props.IconComponent();
+    const expected = shallow(props.IconComponent());
     expect(children[0].matches(expected)).toBe(true);
     const link = el.instance.findByType('a')[0];
     expect(link.props.href).toBe(props.href);
