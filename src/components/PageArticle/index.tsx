@@ -3,6 +3,7 @@ import Contact from '~/pages/Contact';
 import Portfolio from '~/pages/Portfolio';
 import Resume from '~/pages/Resume';
 import Demos from '~/pages/Demos';
+import APIDocs from '~/pages/APIDocs';
 import { pages } from '~/data/pages';
 
 export const articleComponents = {
@@ -11,6 +12,7 @@ export const articleComponents = {
   [pages.portfolio]: Portfolio,
   [pages.resume]: Resume,
   [pages.demo]: Demos,
+  [pages.api]: APIDocs,
 };
 
 const PageArticle = ({ activePage }: { activePage: string }) => {

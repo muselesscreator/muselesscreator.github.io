@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`NavEntry component > active entry > snapshot 1`] = `
-"<li
+<li
   className="navbar-item"
 >
   <NavLink
@@ -10,11 +10,11 @@ exports[`NavEntry component > active entry > snapshot 1`] = `
   >
     About
   </NavLink>
-</li>"
+</li>
 `;
 
 exports[`NavEntry component > inactive entry > snapshot 1`] = `
-"<li
+<li
   className="navbar-item"
 >
   <NavLink
@@ -23,5 +23,5 @@ exports[`NavEntry component > inactive entry > snapshot 1`] = `
   >
     About
   </NavLink>
-</li>"
+</li>
 `;

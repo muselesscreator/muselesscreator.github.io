@@ -18,6 +18,7 @@ export const routes = [
   { path: '/contact', page: pages.contact },
   { path: '/demo', page: pages.demo },
   { path: '/blog', page: pages.blog },
+  { path: '/api', page: pages.api },
 ];
 
 export const App = () => {

@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ContactList > renders correctly 1`] = `
-"<ul
+<ul
   className="contacts-list"
 >
   <ContactItem
@@ -28,5 +28,5 @@ exports[`ContactList > renders correctly 1`] = `
     title="LinkedIn"
     value="https://www.linkedin.com/in/benjamin-warzeski-69111518/"
   />
-</ul>"
+</ul>
 `;

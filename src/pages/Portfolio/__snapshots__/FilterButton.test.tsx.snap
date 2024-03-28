@@ -1,27 +1,27 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`FilterButton component > active snapshot 1`] = `
-"<li
+<li
   className="filter-item"
 >
   <button
     className="active"
-    onClick={[Function handleFilterChange(Test Filter)]}
+    onClick={[MockFunction handleFilterChange(Test Filter)]}
   >
     Test Filter
   </button>
-</li>"
+</li>
 `;
 
 exports[`FilterButton component > inactive snapshot 1`] = `
-"<li
+<li
   className="filter-item"
 >
   <button
     className=""
-    onClick={[Function handleFilterChange(Test Filter)]}
+    onClick={[MockFunction handleFilterChange(Test Filter)]}
   >
     Test Filter
   </button>
-</li>"
+</li>
 `;

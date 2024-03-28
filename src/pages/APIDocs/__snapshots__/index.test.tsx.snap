@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`About page > snapshot 1`] = `
-<article
+"<article
   className="about active"
 >
   <header>
@@ -35,5 +35,5 @@ exports[`About page > snapshot 1`] = `
       </li>
     </ul>
   </div>
-</article>
+</article>"
 `;

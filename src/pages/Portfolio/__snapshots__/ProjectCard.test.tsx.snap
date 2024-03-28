@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ProjectCard > snapshot 1`] = `
-"<a
+<a
   href="project-url"
   rel="noopener noreferrer"
   target="_blank"
@@ -32,5 +32,5 @@ exports[`ProjectCard > snapshot 1`] = `
   >
     Project Category
   </p>
-</a>"
+</a>
 `;

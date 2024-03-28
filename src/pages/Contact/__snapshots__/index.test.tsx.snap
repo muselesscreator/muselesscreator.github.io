@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Contact page > output > invalid (empty) snapshot (disables submit button 1`] = `
-"<article
+<article
   className="contact active"
 >
   <header>
@@ -31,7 +31,7 @@ exports[`Contact page > output > invalid (empty) snapshot (disables submit butto
         <input
           className="form-input"
           name="fullname"
-          onChange={[Function hookProps.handleNameChange]}
+          onChange={[MockFunction hookProps.handleNameChange]}
           placeholder="Full name"
           required={true}
           type="text"
@@ -40,7 +40,7 @@ exports[`Contact page > output > invalid (empty) snapshot (disables submit butto
         <input
           className="form-input"
           name="email"
-          onChange={[Function hookProps.handleEmailChange]}
+          onChange={[MockFunction hookProps.handleEmailChange]}
           placeholder="Email address"
           required={true}
           type="email"
@@ -50,7 +50,7 @@ exports[`Contact page > output > invalid (empty) snapshot (disables submit butto
       <textarea
         className="form-input"
         name="message"
-        onChange={[Function hookProps.handleMessageChange]}
+        onChange={[MockFunction hookProps.handleMessageChange]}
         placeholder="Your Message"
         required={true}
         value=""
@@ -67,11 +67,11 @@ exports[`Contact page > output > invalid (empty) snapshot (disables submit butto
       </button>
     </form>
   </section>
-</article>"
+</article>
 `;
 
 exports[`Contact page > output > snapshot 1`] = `
-"<article
+<article
   className="contact active"
 >
   <header>
@@ -101,7 +101,7 @@ exports[`Contact page > output > snapshot 1`] = `
         <input
           className="form-input"
           name="fullname"
-          onChange={[Function hookProps.handleNameChange]}
+          onChange={[MockFunction hookProps.handleNameChange]}
           placeholder="Full name"
           required={true}
           type="text"
@@ -110,7 +110,7 @@ exports[`Contact page > output > snapshot 1`] = `
         <input
           className="form-input"
           name="email"
-          onChange={[Function hookProps.handleEmailChange]}
+          onChange={[MockFunction hookProps.handleEmailChange]}
           placeholder="Email address"
           required={true}
           type="email"
@@ -120,7 +120,7 @@ exports[`Contact page > output > snapshot 1`] = `
       <textarea
         className="form-input"
         name="message"
-        onChange={[Function hookProps.handleMessageChange]}
+        onChange={[MockFunction hookProps.handleMessageChange]}
         placeholder="Your Message"
         required={true}
         value="This is a message for testing purposes"
@@ -137,5 +137,5 @@ exports[`Contact page > output > snapshot 1`] = `
       </button>
     </form>
   </section>
-</article>"
+</article>
 `;

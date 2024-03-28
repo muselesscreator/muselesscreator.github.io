@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Portfolio page > snapshot 1`] = `
-"<article
+<article
   className="portfolio active"
 >
   <header>
@@ -15,8 +15,8 @@ exports[`Portfolio page > snapshot 1`] = `
     className="projects"
   >
     <ProjectFilters
-      handleCategoryChange={[Function hookProps.handleCategoryChange]}
-      handleFilterChange={[Function hookProps.handleFilterChange]}
+      handleCategoryChange={[MockFunction hookProps.handleCategoryChange]}
+      handleFilterChange={[MockFunction hookProps.handleFilterChange]}
       projectFilter="test-project-filter"
     />
     <ul
@@ -66,5 +66,5 @@ exports[`Portfolio page > snapshot 1`] = `
       </li>
     </ul>
   </section>
-</article>"
+</article>
 `;

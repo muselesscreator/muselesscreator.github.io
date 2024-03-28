@@ -13,6 +13,7 @@ type ProjectData = {
   category: string;
   githubUrl: string;
   githubRepo: string;
+  apiUrl?: string;
   packageName?: string;
   packageUrl?: string;
   screenshots?: string[];
@@ -29,7 +30,7 @@ export const ProjectCategories = StrictDict({
 
 const projects: ProjectData[] = [
   {
-    title: '@muselesscreator/react-shallow-snapshot',
+    title: 'react-shallow-snapshot',
     description: 'A shallow snapshot testing utility for React',
     category: ProjectCategories.public,
     githubUrl: 'https://www.github.com/muselesscreator/react-shallow-snapshot',
@@ -38,9 +39,10 @@ const projects: ProjectData[] = [
     packageUrl: 'https://www.npmjs.com/package/@muselesscreator/react-shallow-snapshot',
     image: shallowSnapshotImg,
     projectUrl: 'https://www.npmjs.com/package/@muselesscreator/react-shallow-snapshot',
+    apiUrl: 'https://muselesscreator.github.io/react-shallow-snapshot/',
   },
   {
-    title: '@muselesscreator/strict-dict',
+    title: 'strict-dict',
     description: 'A key-safe object wrapper for JS',
     category: ProjectCategories.public,
     githubUrl: 'https://www.github.com/muselesscreator/strict-dict',
@@ -50,9 +52,10 @@ const projects: ProjectData[] = [
     details: 'A key-safe dictionary for JavaScript.  This package is used in all of my projects and is available for anyone to use.',
     image: strictDictImg,
     projectUrl: 'https://www.npmjs.com/package/@muselesscreator/strict-dict',
+    apiUrl: 'https://muselesscreator.github.io/strict-dict/',
   },
   {
-    title: '@muselesscreator/use-keyed-state',
+    title: 'use-keyed-state',
     description: 'A more testable React hook for keyed state management',
     category: ProjectCategories.public,
     githubUrl: 'https://www.github.com/muselesscreator/use-keyed-state',
@@ -61,6 +64,7 @@ const projects: ProjectData[] = [
     packageUrl: 'https://www.npmjs.com/package/@muselesscreator/use-keyed-state',
     projectUrl: 'https://www.npmjs.com/package/@muselesscreator/use-keyed-state',
     image: useKeyedStateImg,
+    apiUrl: 'https://muselesscreator.github.io/use-keyed-state/',
   },
   {
     title: 'EdX Gradebook App Re-Architecture',

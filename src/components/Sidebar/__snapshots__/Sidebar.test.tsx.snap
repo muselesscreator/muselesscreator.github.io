@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Sidebar component > snapshot 1`] = `
-"<aside
+<aside
   className="sidebar active"
 >
   <div
@@ -11,7 +11,7 @@ exports[`Sidebar component > snapshot 1`] = `
     <UserInfo />
     <button
       className="info_more-btn"
-      onClick={[Function hookProps.toggle]}
+      onClick={[MockFunction hookProps.toggle]}
     >
       <span>
         Show Contacts 
@@ -27,5 +27,5 @@ exports[`Sidebar component > snapshot 1`] = `
     />
     <ContactList />
   </div>
-</aside>"
+</aside>
 `;

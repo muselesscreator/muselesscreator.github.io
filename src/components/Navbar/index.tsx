@@ -4,10 +4,11 @@ import NavEntry from './NavEntry';
 
 export const PAGE_ORDER = [
   pages.about,
-  pages.resume,
-  pages.portfolio,
-  // pages.blog,
+  pages.api,
   pages.demo,
+  pages.portfolio,
+  pages.resume,
+  // pages.blog,
   pages.contact,
 ];
 

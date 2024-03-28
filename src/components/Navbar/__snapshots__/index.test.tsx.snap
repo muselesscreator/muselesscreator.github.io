@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`NavBar component > about page snapshot 1`] = `
-"<nav
+<nav
   className="navbar"
 >
   <ul
@@ -13,11 +13,7 @@ exports[`NavBar component > about page snapshot 1`] = `
     />
     <NavEntry
       isActive={false}
-      page="resume"
-    />
-    <NavEntry
-      isActive={false}
-      page="portfolio"
+      page="api"
     />
     <NavEntry
       isActive={false}
@@ -25,8 +21,16 @@ exports[`NavBar component > about page snapshot 1`] = `
     />
     <NavEntry
       isActive={false}
+      page="portfolio"
+    />
+    <NavEntry
+      isActive={false}
+      page="resume"
+    />
+    <NavEntry
+      isActive={false}
       page="contact"
     />
   </ul>
-</nav>"
+</nav>
 `;

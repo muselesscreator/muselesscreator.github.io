@@ -1,23 +1,23 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ProjetFilters component > snapshot 1`] = `
-"<div>
+<div>
   <ul
     className="filter-list"
   >
     <FilterButton
       filter="All"
-      handleFilterChange={[Function props.handleCategoryChange]}
+      handleFilterChange={[MockFunction props.handleCategoryChange]}
       isActive={true}
     />
     <FilterButton
       filter="Public Packages"
-      handleFilterChange={[Function props.handleCategoryChange]}
+      handleFilterChange={[MockFunction props.handleCategoryChange]}
       isActive={false}
     />
     <FilterButton
       filter="Open Source Contributions"
-      handleFilterChange={[Function props.handleCategoryChange]}
+      handleFilterChange={[MockFunction props.handleCategoryChange]}
       isActive={false}
     />
   </ul>
@@ -25,19 +25,19 @@ exports[`ProjetFilters component > snapshot 1`] = `
     className="filter-select-box"
   >
     <Select
-      handleChange={[Function props.handleFilterChange]}
+      handleChange={[MockFunction props.handleFilterChange]}
       label="Select category"
       options={
-        Array [
-          Object {
+        [
+          {
             "label": "All",
             "value": "All",
           },
-          Object {
+          {
             "label": "Public Packages",
             "value": "Public Packages",
           },
-          Object {
+          {
             "label": "Open Source Contributions",
             "value": "Open Source Contributions",
           },
@@ -46,5 +46,5 @@ exports[`ProjetFilters component > snapshot 1`] = `
       value="All"
     />
   </div>
-</div>"
+</div>
 `;

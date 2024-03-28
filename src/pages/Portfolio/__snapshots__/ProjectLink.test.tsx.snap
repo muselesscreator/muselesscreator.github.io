@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ProjectLink > snapshot 1`] = `
-"<p>
+<p>
   <div>
     IconComponent
   </div>
@@ -14,5 +14,5 @@ exports[`ProjectLink > snapshot 1`] = `
   >
     Test Label
   </a>
-</p>"
+</p>
 `;

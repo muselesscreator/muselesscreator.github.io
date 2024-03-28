@@ -1,0 +1,17 @@
+.api-docs {
+  .article-subtitle {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  .project-link {
+    list-style-type: circle;
+    div {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+  img {
+    width: 100px;
+    display: inline-block;
+  }
+}

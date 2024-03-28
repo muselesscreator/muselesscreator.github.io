@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`App > output > snapshot 1`] = `
-"<main>
+<main>
   <Sidebar />
   <div
     className="main-content"
@@ -12,117 +12,69 @@ exports[`App > output > snapshot 1`] = `
     <Routes>
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "about",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="about"
+          />
         }
         path="/"
       />
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "about",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="about"
+          />
         }
         path="/about"
       />
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "resume",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="resume"
+          />
         }
         path="/resume"
       />
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "portfolio",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="portfolio"
+          />
         }
         path="/portfolio"
       />
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "contact",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="contact"
+          />
         }
         path="/contact"
       />
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "demo",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="demo"
+          />
         }
         path="/demo"
       />
       <Route
         element={
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "activePage": "blog",
-            },
-            "ref": null,
-            "type": "PageArticle",
-          }
+          <PageArticle
+            activePage="blog"
+          />
         }
         path="/blog"
       />
+      <Route
+        element={
+          <PageArticle
+            activePage="api"
+          />
+        }
+        path="/api"
+      />
     </Routes>
   </div>
-</main>"
+</main>
 `;
